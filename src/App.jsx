@@ -13,14 +13,14 @@ function App() {
     });
 
     setGameTurns((prevGameTurns) => {
-      const prevPlayer = "X";
+      let currentPlayer = "X";
 
       if (gameTurns.length && prevGameTurns[0].player === "X") {
-        prevPlayer = "O";
+        currentPlayer = "O";
       }
 
       const updatedGameTurns = [
-        { square: { row: rowIndex, cell: cellIndex }, player: prevPlayer },
+        { square: { row: rowIndex, cell: cellIndex }, player: currentPlayer },
         ...prevGameTurns,
       ];
 
@@ -46,7 +46,7 @@ function App() {
       </div>
       <GameBoard
         onSelectPlayer={handleSelectPlayer}
-        activePlayerSymbol={activePlayer}
+        turns={gameTurns}
       />
       <Log />
     </main>
