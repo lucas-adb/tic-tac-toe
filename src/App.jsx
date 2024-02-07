@@ -31,7 +31,7 @@ function App() {
     });
   }
 
-  console.log(gameTurns);
+  // console.log(gameTurns);
 
   return (
     <main>
