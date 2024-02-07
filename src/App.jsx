@@ -48,7 +48,7 @@ function App() {
         onSelectPlayer={handleSelectPlayer}
         turns={gameTurns}
       />
-      <Log />
+      <Log turns={gameTurns} />
     </main>
   );
 }
