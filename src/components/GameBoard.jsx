@@ -4,13 +4,13 @@ export default function GameBoard({ onSelectPlayer, board }) {
       {board.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
-            {row.map((cell, cellIndex) => (
-              <li key={cellIndex}>
+            {row.map((column, columnIndex) => (
+              <li key={columnIndex}>
                 <button
-                  onClick={() => onSelectPlayer(rowIndex, cellIndex)}
-                  disabled={cell !== null}
+                  onClick={() => onSelectPlayer(rowIndex, columnIndex)}
+                  disabled={column !== null}
                 >
-                  {cell}
+                  {column}
                 </button>
               </li>
             ))}
