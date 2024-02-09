@@ -49,6 +49,8 @@ header h1 {
   /* color: #e8e8c6; */
   font-family: 'Silkscreen', sans-serif;
   text-align: center;
+  /* margin-block-start: 2rem; */
+  padding-block-start: 2rem;
 }
 
 #game-container {
@@ -56,7 +58,7 @@ header h1 {
   border-radius: 2rem;
   max-width: 30rem;
   padding: 2rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 /* FLOAT ANIMATION WHEN PLAYER IS ACTIVE */
@@ -115,7 +117,7 @@ header h1 {
 /* PIXEL STYLE BUTTON */
 
 #players button {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   font-family: 'Silkscreen', sans-serif;
 
   background: #252525;
@@ -178,12 +180,7 @@ header h1 {
 }
 
 /* FIX THE INPUT WIDTH ON SMALLER SCREENS */
-
-@media screen and (max-width: 450px) {
-  #players {
-    justify-content: center;
-  }
-
+@media screen and (max-width: 500px) {
   .player input {
     max-width: 180px;
   }
@@ -196,3 +193,94 @@ header h1 {
 }
 
 /* END FIX THE INPUT WIDTH ON SMALLER SCREENS */
+
+/* STYLE THE GAMEBOARD */
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+#game-board ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#game-board button {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: #e8e8c6;
+  color: #252525;
+  font-size: 3rem;
+  cursor: pointer;
+  /* padding: 1rem; */
+  text-align: center;
+}
+
+/* FIX THE GAME BOARD SIZE ON SMALLER SCREENS */
+
+@media screen and (max-width: 450px) {
+  #game-board, #game-board ol {
+    gap: 1rem;
+  }
+
+  #game-board button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/* STYLE THE LOG */
+
+#log {
+  text-align: center;
+}
+
+main {
+  margin-inline: 2rem;
+}
+
+@media screen and (max-width: 600px){
+  #players {
+    justify-content: center;
+  }
+
+  #game-board {
+    margin-block: 2rem;
+  }
+}
+
+/* FOLD */
+
+@media screen and (max-width: 330px) {
+  #game-board button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  #game-container {
+    padding: 1rem;
+  }
+
+  body {
+    font-size: 0.8rem;
+  }
+}
