@@ -49,16 +49,15 @@ header h1 {
   /* color: #e8e8c6; */
   font-family: 'Silkscreen', sans-serif;
   text-align: center;
-  /* margin-block-start: 2rem; */
   padding-block-start: 2rem;
 }
 
 #game-container {
-  border: 1px solid #e8e8c6;
-  border-radius: 2rem;
+  border: 2px solid #e8e8c6;
   max-width: 30rem;
   padding: 2rem;
   margin: 2rem auto;
+  box-shadow: 0 0 20px hsl(60, 42%, 94%, 0.8);
 }
 
 /* FLOAT ANIMATION WHEN PLAYER IS ACTIVE */
@@ -117,20 +116,15 @@ header h1 {
 /* PIXEL STYLE BUTTON */
 
 #players button {
-  /* font-size: 1.2em; */
   font-family: 'Silkscreen', sans-serif;
-
   background: #252525;
   color: #e8e8c6;
   border: 0;
   position: relative;
-  
-
 }
 
 #players button:hover {
   cursor: pointer;
-	/* background-color: hsl(60, 42%, 74%); */
 }
 
 #players button:active {
@@ -161,10 +155,6 @@ header h1 {
 }
 
 /* END PIXEL STYLE BUTTON */
-
-/* .player-name {
-  margin-inline-end: 0.5rem;
-} */
 
 .player {
   display: flex;
@@ -229,8 +219,11 @@ ol {
   color: #252525;
   font-size: 3rem;
   cursor: pointer;
-  /* padding: 1rem; */
   text-align: center;
+}
+
+#game-board button:hover {
+  box-shadow: 0 0 20px hsl(60, 42%, 94%, 0.5);
 }
 
 /* FIX THE GAME BOARD SIZE ON SMALLER SCREENS */
@@ -283,4 +276,50 @@ main {
   body {
     font-size: 0.8rem;
   }
+}
+
+/* GAME-OVER */
+
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  gap: 2rem;
+}
+
+#game-over h2 {
+  animation: float 2s ease-in-out infinite;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#game-over p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#game-over button {
+  font-family: 'Silkscreen', sans-serif;
+  background: #252525;
+  color: #e8e8c6;
+  position: relative;
+  border: 2px solid #e8e8c6;
+  padding: 0.5rem 1rem;
+}
+
+#game-over button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px hsl(60, 42%, 94%, 0.8);
+}
+
+#game-over button:active {
+  top: 5px;
 }
